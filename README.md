@@ -49,5 +49,3 @@ The Website has no online domain, so, you can only explore by downloading this r
 ## Device 
 
 - Computer
-
----
