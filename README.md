@@ -4,7 +4,7 @@ Daily News website that aims to simulate a search engine for COVID-related news 
 
 ---
 
-## What are the website features?
+## What are the Corona Diary features?
 
 - A search engine that searches for news by country.
 
@@ -29,7 +29,10 @@ Daily News website that aims to simulate a search engine for COVID-related news 
 ---
 
 ## Technologies
-HTML, CSS, JavaScript
+
+- HTML
+- CSS
+- JavaScript
 
 ---
 
@@ -40,6 +43,8 @@ The Website has no online domain, so, you can only explore by downloading this r
 ## Instructions to Execute
 
 - Double click on home.html (It will open a page in your preferred browser)
+
+---
 
 ## Device 
 
