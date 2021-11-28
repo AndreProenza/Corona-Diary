@@ -1,1 +1,25 @@
 # Corona-Diary
+
+Aplicação em HTML, CSS e Javascript para ver noticias relacionadas com COVID de cada pais
+  
+
+
+TAREFAS:
+
+As tarefas de base que todas as aplicações devem incluir são:
+
+- ver as notícias do dia ordenadas por um critério de fiabilidade;    CONCLUIDO!
+
+- configurar a aplicação para receber notificações em determinadas alturas do dia, definindo os conteúdos a serem apresentados na notificação.     CONCLUIDO!
+
+- filtrar o conteúdo de toda a aplicação, usando por exemplo filtros emocionais (ex: omitir toda a informação relativa a mortes) CONCLUIDO!
+
+
+TAREFAS EXTRA:
+
+- Colocar noticias de paises nos favoritos CONCLUIDO!
+
+- Possibilidade de alterar o display da interface de Modo Escuro para  Modo Claro e vice-versa CONCLUIDO!
+
+
+DISPOSITIVO: Computador
