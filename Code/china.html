@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <script>
+  window.onload = function () {
+
+  var chart = new CanvasJS.Chart("chartContainer", {
+    animationEnabled: true,
+    theme: "light2",
+    title:{
+      text: "Cases per day since the first case"
+    },
+    axisY:{
+      includeZero: false
+    },
+    data: [{
+      type: "line",
+          indexLabelFontSize: 16,
+      dataPoints: [
+           {y:386},
+           {y:526},
+           {y:623},
+           {y:882},
+           {y:1323},
+           {y:1988},
+           {y:2775},
+           {y:4528},
+           {y:5994},
+           {y:7734},
+           {y:9714},
+           {y:11809},
+           {y:14399},
+           {y:17211},
+           {y:20448},
+           {y:24320} ,
+           {y:28047},
+           {y:31207},
+           {y:34625},
+           {y:37232},
+           {y:40206},
+           {y:42696},
+           {y:44724},
+           {y:59865},
+           {y:64201},
+           {y:66559},
+           {y:68566},
+           {y:70618},
+           {y:72508},
+           {y:74258},
+           {y:74652},
+           {y:75543},
+           {y:76369},
+           {y:77016},
+           {y:77234},
+           {y:77749},
+           {y:78159},
+           {y:78598},
+           {y:78927},
+           {y:79355},
+           {y:80134},
+           {y:80261},
+           {y:80308},
+           {y:80497},
+           {y:80667},
+           {y:80768},
+           {y:80814},
+           {y:80856},
+           {y:80954},
+           {y:81063},
+           {y:81086},
+           {y:81130},
+           {y:81229},
+           {y:81281},
+           {y:81346},
+           {y:81484},
+           {y:81553},
+           {y:81631},
+           {y:81733},
+           {y:81827},
+           {y:81946},
+           {y:82059},
+           {y:82157},
+           {y:82241},
+           {y:82295},
+           {y:82395},
+           {y:82465},
+           {y:82527},
+           {y:82575},
+           {y:82615},
+           {y:82760},
+           {y:82799},
+           {y:82845},
+           {y:82897},
+           {y:82903},
+           {y:83001},
+           {y:83070},
+           {y:83760},
+           {y:83799},
+           {y:83845},
+           {y:83897},
+           {y:83903},
+           {y:84001},
+           {y:84070},
+           {y:84140},
+           {y:84208},
+           {y:84287}
+
+      ]
+    }]
+  });
+  chart.render();
+
+  follows('China');
+
+  isHidden();
+  getMode();
+  inicializeAlarms();
+  setInterval(showAlarm, 60000);
+
+  }
+  </script>
+  <title>Corona Diary</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" id="style" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+  <div id = "headNoticias">
+  <header id="header">
+    <h1><img id="corona-symbol" src="IMG/logoCorona.jpg">China</h1>
+
+  </header>
+  <nav id="nav">
+    <button id="follow" type="button" onclick="followCountry('China');">Follow Country <i class="fas fa-star"></i></button>
+    <button id="unfollow" type="button" onclick="unfollowCountry('China');">Unfollow</button>
+    <a href="home.html">Start <i class="fas fa-home"></i></a>
+    <a href="covid-19.html">Covid-19 <i class="fas fa-virus"></i></a>
+    <a href="settings.html">Settings <i class="fas fa-wrench"></i></a>
+  </nav>
+  </div>
+  <div id="container">
+  <div id="left-block-news">
+
+    <h1 id= "noticiah1"> China under pressure after reopening fresh produce markets</h1>
+      <p id="verified">Fidelity: High <i class="fas fa-check-circle"></i></p>
+      <img id= "imagemNoticia" src= "IMG/noticias1CHN.jpg" alt="foto chineses" width="500px">
+      <p>In April, the reopening of China's fresh produce markets,
+        known as wet markets is a source of increasing international pressure.
+        This is because researchers of the new coronavirus believe that one of these sites, specifically the city of Wuhan,
+         was the starting point of the pandemic. In addition to vegetables, fruits and vegetables, these fairs also sell meat and live animals,
+         including wild species. These critters carry pathogens that can eventually migrate to humans.
+         In the case of Covid-19, the most likely hypothesis is that the coronavirus came from pangolins, a small mammal, or bats.</p>
+         <p id="fonte"> Source: Veja - 21/04/2020</p>
+        <br>
+    <div id ="ocult">
+      <h1 id= "noticiah3"> Wuhan overhauls and increases death toll by 50% from Covid-19</h1>
+          <p id="verified">Fidelity: High <i class="fas fa-check-circle"></i></p>
+          <img id= "imagemNoticia" src= "IMG/noticia3CHN.jpg" alt="chineses a volta de um globo" width="500px">
+          <p>WUHAN, China — The Chinese city of Wuhan, birthplace of Covid-19, revised its official casualty count this Friday
+            fatal from the disease, adding another 1,290 deaths to the initial count, a 50% increase. The recount, that
+            according to authorities corrects "lapses" in counting cases at the beginning of the pandemic, came amid questions
+            reports on China's data and speculation that it could have covered it up — something Beijing vehemently denies.</p>
+            <p>With the newly released data, the total death toll from Covid-19 in Wuhan, capital of Hubei province,
+              went from 2,579 to 3,869. This caused the number of deaths recorded in mainland China to rise from 3,346 to 4,636, an increase of almost 40%.
+              In addition to retroactive data, the country has not registered any new deaths due to the coronavirus in the last 24 hours.</p>
+          <p id="fonte"> Source : Globo - 17/04/2020</p>
+
+    </div>
+
+
+    <h1 id= "noticiah2"> Northwest China has recurrence of coronavirus cases</h1>
+        <p id="notVerified">Fidelity: Low <i class="fas fa-times-circle"></i></p>
+        <img id= "imagemNoticia" src= "IMG/noticias2CHN.jpg" alt="chineses a volta de um globo" width="500px">
+        <p>A province in northwestern China that is at the forefront of the country's battle
+          against the coronavirus reported this Tuesday (21) its first cases in nearly three weeks,
+           all involving travelers from abroad, while imported infections began to stabilize elsewhere.</p>
+           <p>Like other countries hit by the pandemic, China has imposed strict restrictions on newcomers, such as mandatory quarantine,
+            in addition to reducing international flights and limiting the entry of foreigners, including business travelers.</p>
+        <p id="fonte"> Source : Globo - 21/04/2020</p>
+
+  </div>
+  <div id ="rigth-block-news">
+    <div id="chartContainer" style="height: 300px; width: 100%; padding-top:40px;"></div>
+    <p id="subtitlo"> (Swipe over the chart to see each day's cases)</p>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <section id="news-section">
+      <h3> Statistics </h3>
+      <div id="left-block-stats" class="inside-stats">
+        <div class="block-inside-stats">
+          <h4>Confirmed</h4>
+          <h5>84 287</h5>
+        </div>
+      </div>
+      <div id="center-block-stats" class="inside-stats">
+       <div class="block-inside-stats">
+          <h4>Deaths</h4>
+          <h5 id="ocultNumber">4642</h5>
+      </div>
+      </div>
+      <div id="right-block-stats" class="inside-stats">
+        <div class="block-inside-stats">
+          <h4>Recovered</h4>
+          <h5>77151</h5>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+</body>
+<footer id="footer">
+  <a href="help.html">Help</a>
+</footer>
+</footer>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

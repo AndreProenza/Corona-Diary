@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <script>
+  window.onload = function () {
+
+  var chart = new CanvasJS.Chart("chartContainer", {
+    animationEnabled: true,
+    theme: "light2",
+    title:{
+      text: "Cases per day since the first case"
+    },
+    axisY:{
+      includeZero: false
+    },
+    data: [{
+      type: "line",
+          indexLabelFontSize: 16,
+      dataPoints: [
+           {y:2},
+           {y:2},
+           {y:4},
+           {y:6},
+           {y:9},
+           {y:13},
+           {y:21},
+           {y:30},
+           {y:39},
+           {y:41},
+           {y:59},
+           {y:78},
+           {y:112},
+           {y:169},
+           {y:245},
+           {y:331} ,
+           {y:448},
+           {y:642},
+           {y:785},
+           {y:1020},
+           {y:1280},
+           {y:1600},
+           {y:2060},
+           {y:2362},
+           {y:2995},
+           {y:3554},
+           {y:4268},
+           {y:5170},
+           {y:5962},
+           {y:6408},
+           {y:7443},
+           {y:8251},
+           {y:9034},
+           {y:9886},
+           {y:10524},
+           {y:11278},
+           {y:11730},
+           {y:12442},
+           {y:13141},
+           {y:13956},
+           {y:15472},
+           {y:15987},
+           {y:16585},
+           {y:16934},
+           {y:17448},
+           {y:18091},
+           {y:19049},
+           {y:20863}
+
+      ]
+    }]
+  });
+  chart.render();
+
+  follows('Portugal');
+
+  isHidden();
+  getMode();
+  inicializeAlarms();
+  setInterval(showAlarm, 60000);
+
+  }
+  </script>
+	<title>Corona Diary</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" id="style" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+  <div id = "headNoticias">
+	<header id="header">
+		<h1><img id="corona-symbol" src="IMG/logoCorona.jpg">Portugal</h1>
+
+	</header>
+  <nav id="nav">
+    <button id="follow" type="button" onclick="followCountry('Portugal');">Follow Country <i class="fas fa-star"></i></button>
+    <button id="unfollow" type="button" onclick="unfollowCountry('Portugal');">Unfollow</button>
+    <a href="home.html">Start <i class="fas fa-home"></i></a>
+    <a href="covid-19.html">Covid-19 <i class="fas fa-virus"></i></a>
+    <a href="settings.html">Settings <i class="fas fa-wrench"></i></a>
+  </nav>
+  </div>
+  <div id="container">
+  <div id="left-block-news">
+    <div id ="ocult">
+    <h1 id= "noticiah1"> Another 21 people died in Portugal. There are 20,863 confirmed cases</h1>
+      <p id="verified">Fidelity: High <i class="fas fa-check-circle"></i></p>
+
+      <img id= "imagemNoticia" src= "IMG/noticia1PT.jpg" alt="mortos" width="500px">
+      <h3> There are 215 people in intensive care units and 88% of the
+        infected are recovering at home. The European continent surpassed one hundred thousand deaths in
+         people with covid-19.</h3>
+      <p>Portugal recorded another 21 deaths from covid-19 on the last day, increasing the total to 735 since the
+        onset of the pandemic. The country has a total of 20,863 cases of SARS-CoV-2 virus infection,
+        657 more than the day before – which corresponds to a growth rate of 3.2%. The data
+        were released this Monday in the epidemiological bulletin of the Directorate-General for Health (DGS).</p>
+      <p>The fatality rate in Portugal is 3.5%, and over 70 years old is 12.8%. The number of retrieved
+        remains unchanged: there are 610 — to be considered "cured", two negative tests are needed.</p>
+      <p>There are 1208 in-patients and 215 in intensive care units (nine fewer than on Sunday).
+        People undergoing treatment at home account for 87.8% of cases. The percentage in hospital is 5.8%,
+        with 1.8% in intensive care and 4.8% in the infirmary”, revealed the Secretary of State for Health,
+        António Lacerda Sales, at a press conference.</p>
+
+        <p id="fonte"> Source : Publico - 20/04/2020 </p>
+        <br>
+    <h1 id= ""> Portugal with 928 dead and 24,027 infected. There are already 1,357 recovered patients</h1>
+        <p id="verified">Fidelity: High <i class="fas fa-check-circle"></i></p>
+        <img id= "imagemNoticia" src= "IMG/noticias3PT.jpg" alt="enfermeira e idoso" width="500px">
+        <p>Another 25 deaths from COVID-19 in 24 hours and another 163 infected in Portugal.
+          The numbers were released this Monday in the epidemiological bulletin of the Directorate-General for Health (DGS).</p>
+         <p>Since the epidemic began in Portugal, 928 deaths have been registered
+          associated with COVID-19 and 24,027 cases of infection, according to the epidemiological bulletin
+           released by the General Directorate of Health (DGS). Regarding the Sunday data,
+           there is an increase of 25 dead (percentage increase of 2.8%) and of 163 infected (percentage increase of 0.7%.).
+          There are already 1,357 recovery cases, 28 more than yesterday.</p>
+        <p id="fonte"> Source : Sapo - 27/04/2020</p><br>
+    </div>
+    <h1 class = "noticiah1"> How are the lives of six recovered from Covid-19. They are cured but keep the same care</h1>
+    <p id="verified">Fidelity: High <i class="fas fa-check-circle"></i></p>
+    <img id= "imagemNoticia" src= "IMG/noticias2PT.jpg" alt="enfermeiro" width="500px">
+    <h3 class = "noticiah3"> They all surpassed Covid-19, but no matter how much they hear about the possibility of becoming
+      immune to the virus, maintain the care from before. Most say they are still isolated at home.</h3>
+    <p> Manuel is a nurse and volunteered to start working with those infected,
+      but he takes no more risks and continues to sleep in a different room from his wife and stay away from his daughters.</p>
+    <p> Sílvia no longer spends her life cleaning the house with water and bleach but she still doesn't dare to join the rest
+      of the extended family — not even with those who have also been infected and have already been reported as recovered.</p>
+    <p> And if Sara has finally allowed herself to play with her 2-and-a-half-year-old son, without wearing a mask, on the other hand
+      side doesn't even want to hear about stepping back into the street — which is not without its fair share of irony,
+      since it was precisely at home that she caught the new coronavirus.</p>
+    <p> All had Covid-19 and all were reported as recovered — they are part of the only green-hope value that
+      it appears in the reports where the General Directorate of Health reports on the evolution of the disease, exactly that
+      which rises more slowly and continues, at least for the time being, not being able to surpass the black number of deaths.</p>
+    <p id="fonte"> Source : Observador - 18/04/2020</p>
+  </div>
+  <div id ="rigth-block-news">
+    <div id="chartContainer" style="height: 300px; width: 100%; padding-top:40px;"></div>
+    <p id="subtitlo"> (Swipe over the chart to see each day's cases)</p>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <section id="news-section">
+      <h3> Statistics </h3>
+      <div id="left-block-stats" class="inside-stats">
+        <div class="block-inside-stats">
+          <h4>Confirmed</h4>
+          <h5>20863</h5>
+        </div>
+      </div>
+      <div id="center-block-stats" class="inside-stats">
+       <div class="block-inside-stats">
+          <h4>Deaths</h4>
+          <h5 id="ocultNumber">735</h5>
+      </div>
+      </div>
+      <div id="right-block-stats" class="inside-stats">
+        <div class="block-inside-stats">
+          <h4>Recovered</h4>
+          <h5>610</h5>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+</body>
+<footer id="footer">
+  <a href="help.html">Help</a>
+</footer>
+<script type="text/javascript" src="script.js"></script>
+</html>

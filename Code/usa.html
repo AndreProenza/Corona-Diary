@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <script>
+  window.onload = function () {
+
+  var chart = new CanvasJS.Chart("chartContainer", {
+    animationEnabled: true,
+    theme: "light2",
+    title:{
+      text: "Cases per day since the first case"
+    },
+    axisY:{
+      includeZero: false
+    },
+    data: [{
+      type: "line",
+          indexLabelFontSize: 16,
+      dataPoints: [
+           {y:1},
+           {y:2},
+           {y:5},
+           {y:5},
+           {y:5},
+           {y:7},
+           {y:7},
+           {y:11},
+           {y:13},
+           {y:20},
+           {y:20},
+           {y:23},
+           {y:25},
+           {y:27},
+           {y:33},
+           {y:33} ,
+           {y:35},
+           {y:37},
+           {y:38},
+           {y:39},
+           {y:39},
+           {y:53},
+           {y:73},
+           {y:109},
+           {y:172},
+           {y:217},
+           {y:336},
+           {y:450},
+           {y:514},
+           {y:708},
+           {y:1100},
+           {y:1600},
+           {y:2100},
+           {y:2900},
+           {y:4300},
+           {y:6100},
+           {y:8900},
+           {y:14001},
+           {y:19000},
+           {y:25700},
+           {y:33600},
+           {y:43700},
+           {y:53700},
+           {y:65800},
+           {y:83800},
+           {y:101700},
+           {y:121500},
+           {y:140900},
+           {y:161800},
+           {y:188200},
+           {y:213200},
+           {y:243600},
+           {y:275400},
+           {y:308600},
+           {y:336800},
+           {y:397100},
+           {y:428700},
+           {y:462800},
+           {y:496500},
+           {y:526400},
+           {y:555300},
+           {y:580600},
+           {y:607700},
+           {y:636400},
+           {y:667600},
+           {y:699700},
+           {y:732200},
+           {y:758800},
+           {y:784300},
+           {y:823800}
+      ]
+    }]
+  });
+  chart.render();
+
+  follows('USA');
+
+  isHidden();
+  getMode();
+  inicializeAlarms();
+  setInterval(showAlarm, 60000);
+
+  }
+  </script>
+  <title>Corona Diary</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" id="style" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+  <div id = "headNoticias">
+  <header id="header">
+    <h1><img id="corona-symbol" src="IMG/logoCorona.jpg">United States of America</h1>
+
+  </header>
+  <nav id="nav">
+    <button id="follow" type="button" onclick="followCountry('USA');">Follow Country <i class="fas fa-star"></i></button>
+    <button id="unfollow" type="button" onclick="unfollowCountry('USA');">Unfollow</button>
+    <a href="home.html">Start <i class="fas fa-home"></i></a>
+    <a href="covid-19.html">Covid-19 <i class="fas fa-virus"></i></a>
+    <a href="settings.html">Settings <i class="fas fa-wrench"></i></a>
+  </nav>
+  </div>
+  <div id="container">
+  <div id="left-block-news">
+    <div id="ocult">
+    <h1 id= "noticiah1"> United States with 2751 dead in 24 hours</h1>
+      <p id="verified">Fidelity: High <i class="fas fa-check-circle"></i></p>
+      <img id= "imagemNoticia" src= "IMG/noticias1USA.jpg" alt="fatalidade americana" width="500px">
+      <p>The United States has recorded 2751 deaths caused by Covid-19 in the past 24 hours, an increase from the day before.
+        , last night indicated Johns Hopkins University.</p>
+      <p>This daily balance raises to 44,845 the total number of deaths since the beginning of the epidemic in the country,
+        officially the most affected in the world by Covid-19.</p>
+      <p>The number of infected has already surpassed the 824.438 thousand officially diagnosed, with close to 40 thousand
+        new infections until 1:30 am this Wednesday in Lisbon, according to the count of that university.
+        About 75,000 people have since been declared cured.</p>
+      <p id="fonte"> Source : RTP - 22/04/2020</p>
+        <br>
+    </div>
+    <h1 id= "noticiah2"> Madonna uses social media as "Quarantine Diary". Some say she is "desperate"</h1>
+      <p id="notVerified">Fidelity: Low <i class="fas fa-times-circle"></i></p>
+        <p>The daily life with the children and the partner confined at home, memories of what it was and even less consensual videos.
+          How the Pop diva has used social media and raised criticism.</p>
+        <img id="madonna" src="IMG/madonnaUSA.jpg" alt="madonna" width="500px">
+        <p>Madonna was one of the names not present at the One World concert: Together at Home, q
+          that over the weekend brought together musicians such as Lady Gaga, Elton John, The Rolling Stones, Céline Dion,
+          Taylor Swift, John Legend, Jennifer Lopez or Billie Eilish and which was streamed online.
+          Despite absent from that event in the music world, the American singer has been doing well
+          present on social networks. So present that one of the videos she published, naked in a bathtub with milk and
+          rose petals, in a kind of rubric she called “Diary of a Quarantine”, was eventually deleted from
+          Her Instagram after a barrage of criticism.</p>
+        <p id="fonte"> Source : Observador - 22/04/2020</p>
+  </div>
+  <div id ="rigth-block-news">
+    <div id="chartContainer" style="height: 300px; width: 100%; padding-top:40px;"></div>
+    <p id="subtitlo"> (Swipe over the chart to see each day's cases)</p>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <section id="news-section">
+      <h3> Statistics </h3>
+      <div id="left-block-stats" class="inside-stats">
+        <div class="block-inside-stats">
+          <h4>Confirmed</h4>
+          <h5>847 849</h5>
+        </div>
+      </div>
+      <div id="center-block-stats" class="inside-stats">
+       <div class="block-inside-stats">
+          <h4>Deaths</h4>
+          <h5 id="ocultNumber">47 349</h5>
+      </div>
+      </div>
+      <div id="right-block-stats" class="inside-stats">
+        <div class="block-inside-stats">
+          <h4>Recovered</h4>
+          <h5>77 021</h5>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+</body>
+<footer id="footer">
+  <a href="help.html">Help</a>
+</footer>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
