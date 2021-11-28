@@ -1,25 +1,48 @@
 # Corona-Diary
 
-Aplicação em HTML, CSS e Javascript para ver noticias relacionadas com COVID de cada pais
-  
+Daily News website that aims to simulate a search engine for COVID-related news from different countries in the world.
 
+---
 
-TAREFAS:
+## What are the website features?
 
-As tarefas de base que todas as aplicações devem incluir são:
+- A search engine that searches for news by country.
 
-- ver as notícias do dia ordenadas por um critério de fiabilidade;    CONCLUIDO!
+- Check global or daily country news sorted by a reliability criterion
 
-- configurar a aplicação para receber notificações em determinadas alturas do dia, definindo os conteúdos a serem apresentados na notificação.     CONCLUIDO!
+- Possibility to configure the application to receive notifications at a certain time of the day, defining the contents to be displayed in the notification
 
-- filtrar o conteúdo de toda a aplicação, usando por exemplo filtros emocionais (ex: omitir toda a informação relativa a mortes) CONCLUIDO!
+- Possibility to filter the application content, using emotional filters (omits all death information by country)
 
+- Possibility to bookmark a country news in home page favorites tab
 
-TAREFAS EXTRA:
+- Possibility to change the interface display from Dark Mode to Light Mode and vice versa
 
-- Colocar noticias de paises nos favoritos CONCLUIDO!
+---
 
-- Possibilidade de alterar o display da interface de Modo Escuro para  Modo Claro e vice-versa CONCLUIDO!
+## Main Activities
 
+- Plan website
+- Design website
+- Code organization
 
-DISPOSITIVO: Computador
+---
+
+## Technologies
+HTML, CSS, JavaScript
+
+---
+
+### Note
+
+The Website has no online domain, so, you can only explore by downloading this repository to your local machine.
+
+## Instructions to Execute
+
+- Double click on home.html (It will open a page in your preferred browser)
+
+## Device 
+
+- Computer
+
+---
