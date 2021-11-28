@@ -2,7 +2,7 @@
 
 Daily News website that aims to simulate a search engine for COVID-related news from different countries in the world.
 
-![Corona-Diary](https://user-images.githubusercontent.com/78174997/143780153-d5e193cf-5e20-4894-9739-dccc1fe338d0.gif)
+![diary-corona](https://user-images.githubusercontent.com/78174997/143780484-176a1b20-b367-45bf-a280-85f03895c675.gif)
 
 ---
 
