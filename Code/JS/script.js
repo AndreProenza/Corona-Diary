@@ -41,16 +41,16 @@ function showNews(){
 	var name = query.querySelector("input").value;
 
 		if(name == "PORTUGAL" || name == "portugal" || name == "Portugal"){
-			window.open("portugal.html");
+			window.open("HTML/portugal.html");
 		}else if (name ==  "ESPANHA" || name == "espanha" || name == "spain" || name == "Espanha" || name == "Spain") {
-			window.open("spain.html");
+			window.open("HTML/spain.html");
 		}else if (name ==  "CHINA" || name == "china" || name == "China") {
-			window.open("china.html");
+			window.open("HTML/china.html");
 		}else if (name ==  "ITALIA" || name == "italia" || name == "italy" || name == "ITALY" || name == "Italy" || name == "Italia") {
-			window.open("italy.html");
+			window.open("HTML/italy.html");
 		}else if (name ==  "USA" || name == "usa" || name == "Estados Unidos da America" || name == "UNITED STATES OF AMERICA" || name == "Estados Unidos" || name == "estados unidos"
 			|| name == "eua" || name == "EUA") {
-			window.open("usa.html");
+			window.open("HTML/usa.html");
 		}else{
 			window.alert("Please enter a valid country name!");
 		}
@@ -96,6 +96,48 @@ function isHidden() {
 
 /* SETTINGS */
 
+function getModeHome() {
+	var storedContent = Object.keys(localStorage);
+
+	if (!storedContent.includes("darkmode")) {
+		var myJSON = JSON.stringify("false");
+		localStorage.setItem("darkmode", myJSON);
+	} else {
+		loadModeHome();
+	}
+}
+
+function loadModeHome() {
+	var x = localStorage.getItem("darkmode");
+	var darkmode = JSON.parse(x);
+
+	if (darkmode == "true") {
+		darkModeHome();
+		var mode = document.getElementById("settings");
+		if (mode != null) {
+			var checkbox = mode.querySelector("input[type=checkbox]");
+			checkbox.checked = true;
+		}
+	}
+}
+
+function darkModeHome() {
+	var style = document.getElementById("style");
+
+	style.href="CSS/styleDarkMode.css";
+}
+
+function lightModeHome() {
+	var style = document.getElementById("style");
+
+	style.href="CSS/style.css";
+}
+
+
+
+
+
+
 function getMode() {
 	var storedContent = Object.keys(localStorage);
 
@@ -138,13 +180,13 @@ function switchMode() {
 function darkMode() {
 	var style = document.getElementById("style");
 
-	style.href="styleDarkMode.css";
+	style.href="../CSS/styleDarkMode.css";
 }
 
 function lightMode() {
 	var style = document.getElementById("style");
 
-	style.href="style.css";
+	style.href="../CSS/style.css";
 }
 
 
@@ -310,7 +352,7 @@ function followedHome() {
 function addToFollowedHome(countryName) {
 	var list = document.getElementById("list-favourites");
 	var a = document.createElement("a");
-	var ref = countryName.toLowerCase() + ".html";
+	var ref = "HTML/" + countryName.toLowerCase() + ".html";
 	var text = document.createTextNode(countryName);
 
 	a.href = ref;
@@ -363,17 +405,17 @@ function showNotification(number, pair) {
 
 	var h5 = document.createElement("h5");
 
-	var not = document.createTextNode("Notificação ");
+	var not = document.createTextNode("Notification ");
 
 	var cross = document.createElement("i");
 	cross.className = "fas fa-times";
 	cross.addEventListener("click", function(){deleteNotification(number)});
 
 	var link = document.createElement("a");
-	link.href = pair[1].toLowerCase() + ".html";
+	link.href = "HTML/" + pair[1].toLowerCase() + ".html";
 	link.id = "note" + number.toString();
 
-	var text = document.createTextNode("Horas: " + pair[0] + " | " + pair[1]);
+	var text = document.createTextNode("Hours: " + pair[0] + " | " + pair[1]);
 
 	h5.appendChild(not);
 	h5.appendChild(cross);
