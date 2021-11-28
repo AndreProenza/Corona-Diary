@@ -22,14 +22,6 @@ Daily News website that aims to simulate a search engine for COVID-related news 
 
 ---
 
-## Main Activities
-
-- Plan website
-- Design website
-- Code organization
-
----
-
 ## Technologies
 
 - HTML
