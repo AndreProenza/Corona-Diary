@@ -22,14 +22,6 @@ Daily News website that aims to simulate a search engine for COVID-related news 
 
 ---
 
-## Technologies
-
-- HTML
-- CSS
-- JavaScript
-
----
-
 ### Note
 
 The Website has no online domain, so, you can only explore by downloading this repository to your local machine.
@@ -43,3 +35,19 @@ The Website has no online domain, so, you can only explore by downloading this r
 ## Device 
 
 - Computer
+
+---
+
+## Used Technologies
+
+* [JavaScript](https://www.javascript.com/) - Programming Language;
+* [HTML](https://html.com/) - HyperText Markup Language;
+* [CSS](https://www.w3.org/Style/CSS/Overview.en.html) - Cascading Style Sheets;
+
+---
+
+## Authors
+
+* **André Proença** - [GitHub](https://github.com/AndreProenza)
+* **Manuel Sokolov** - [GitHub](https://github.com/ManuelSokolov)
+* **Henrique Manso** - [GitHub](#)
